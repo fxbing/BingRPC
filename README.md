@@ -1,5 +1,4 @@
 # BingRPC
-=====
 轻量级分布式RPC框架
 
 ## 框架介绍
@@ -58,7 +57,7 @@ public class HelloServiceImpl implements HelloService {
 <li>zookeeper.address: zookeeper服务器地址</li>
 <li>service.address：服务发布地址，客户端调用服务时使用</li>
 </ul>
-####  3.  运行RpcBootstrap类启动服务
+####  3.  运行RpcBootstrap类启动服务   
 ```
 public class RpcBootstrap {
 	private static final Logger LOGGER = LoggerFactory.getLogger(RpcBootstrap.class);
@@ -96,4 +95,5 @@ public class RpcBootstrap {
 <li>调用 RpcProxy 对象的 create 方法来创建 RPC 代理接口</li>
 <li>调用 RPC 代理接口的方法</li>
 </ol>  
-具体见com.study.BingRPC.client.HelloClient.java
+  
+具体见[com.study.BingRPC.client.HelloClient.java]
