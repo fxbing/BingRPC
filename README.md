@@ -79,7 +79,7 @@ public class RpcBootstrap {
 ```
     <context:property-placeholder location="classpath:config.properties"/>
 	
-	  <!-- 配置服务发现组件 -->
+    <!-- 配置服务发现组件 -->
     <bean id="serviceDiscovery" class="com.study.BingRPC.registry.Zookeeper.ZookeeperServiceDiscovery">
         <constructor-arg name="zkAddress" value="${zookeeper.address}"/>
     </bean>
