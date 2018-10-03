@@ -29,11 +29,11 @@ public class HelloServiceImpl implements HelloService {
 		return "Hello! " + name;
 	}
 }
-```
+```  
 通过@RpcService注解定义使用的接口名称和服务版本号（如果存在）  
 
 ### 配置服务端
-#### 1.配置server-spring.xml
+####  1.  配置server-spring.xml
 ```
     <context:component-scan base-package="com.study.BingRPC.server"/>
 
@@ -50,12 +50,12 @@ public class HelloServiceImpl implements HelloService {
         <constructor-arg name="serviceRegistry" ref="serviceRegistry"/>
     </bean>
 ```
-#### 2.配置config.properties
+####  2.  配置config.properties
 <ul>
 <li>zookeeper.address: zookeeper服务器地址</li>
 <li>service.address：服务发布地址，客户端调用服务时使用</li>
 </ul>
-#### 3.运行RpcBootstrap类启动服务
+####  3.  运行RpcBootstrap类启动服务
 ```
 public class RpcBootstrap {
 	private static final Logger LOGGER = LoggerFactory.getLogger(RpcBootstrap.class);
@@ -69,7 +69,7 @@ public class RpcBootstrap {
 ```
 
 ### 配置客户端
-#### 1.配置client-spring.xml
+####  1.  配置client-spring.xml
 ```
     <context:property-placeholder location="classpath:config.properties"/>
 	
@@ -83,14 +83,14 @@ public class RpcBootstrap {
         <constructor-arg name="serviceDiscovery" ref="serviceDiscovery"/>
     </bean>
 ```
-#### 2.配置config.properties
+####  2.  配置config.properties
 <ul>
 <li>zookeeper.address: zookeeper服务器地址</li>
-</ul>
-#### 3.调用 RPC 服务
+</ul>  
+####  3.  调用 RPC 服务
 <ol>
 <li>注入 RpcProxy 对象</li>
 <li>调用 RpcProxy 对象的 create 方法来创建 RPC 代理接口</li>
 <li>调用 RPC 代理接口的方法</li>
-</ol>
+</ol>  
 具体见com.study.BingRPC.client.HelloClient.java
