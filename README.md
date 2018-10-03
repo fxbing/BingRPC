@@ -1,7 +1,9 @@
 # BingRPC
+=====
 轻量级分布式RPC框架
 
 ## 框架介绍
+---
 此框架采用Zookeeper+Netty+Protostuff的组合
 <ol>
 <li>Zookeeper：分布式服务注册框架，负责服务注册与服务发现。</li>
@@ -10,6 +12,7 @@
 </ol>
 
 ## 使用说明
+---
 ### 发布RPC服务 
 #### 1.定义RPC服务接口
 在com.study.BingRPC.api包中定义RPC接口：  
