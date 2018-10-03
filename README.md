@@ -1,4 +1,6 @@
-# BingRPC
+BingRPC
+==
+
 轻量级分布式RPC框架
 
 ## 框架介绍
@@ -57,7 +59,8 @@ public class HelloServiceImpl implements HelloService {
 <ul>
 <li>zookeeper.address: zookeeper服务器地址</li>
 <li>service.address：服务发布地址，客户端调用服务时使用</li>
-</ul>
+</ul>  
+
 ####  3. 运行RpcBootstrap类启动服务   
 ```
 public class RpcBootstrap {
